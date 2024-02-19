@@ -6,7 +6,6 @@ function App() {
   const [color, setColor] = useState("")
   const [textColor, setTextColor] = useState("")
   const [text, setText] = useState("")
-
   const [darkMode, setDarkMode] = useState(false)
   const [alert, setAlert] = useState()
 
@@ -75,8 +74,8 @@ function App() {
             <span className="navbar-brand mb-0 h1">TextUtils</span>
             <div className="d-flex">
               <div className="form-check form-switch me-5">
-                <input className="form-check-input" type="checkbox" onClick={handleDarkMode} checked={darkMode} id="flexSwitchCheckDefault" />
-                <label className="form-check-label" for="flexSwitchCheckDefault">{(darkMode ? 'Light' : 'Dark') + ' Mode'}</label>
+                <input className="form-check-input" type="checkbox" onClick={handleDarkMode} id="flexSwitchCheckDefault" />
+                <label className="form-check-label">{(darkMode ? 'Light' : 'Dark') + ' Mode'}</label>
               </div>
             </div>
           </div>
@@ -97,7 +96,7 @@ function App() {
               <button type="button" className="btn btn-primary m-2" onClick={lower} disabled={text.length === 0}>Lowercase</button>
               <button type="button" className="btn btn-primary m-2" onClick={clear} disabled={text.length === 0}>Clear Text</button>
               <button type="button" className="btn btn-primary m-2" onClick={onDandleCopy} disabled={text.length === 0}>copy Text</button>
-              <button type="button" className="btn btn-primary m-2" onClick={removeExtraSpaces} disabled={text.length === 0}>Remove</button>
+              <button type="button" className="btn btn-primary m-2" onClick={removeExtraSpaces} disabled={text.length === 0}>Remove Extra Spaces</button>
             </div>
 
             <div className="container">
